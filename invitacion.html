@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Primer añito de Santiaguito!</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .invitacion {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 { color: #3498db; margin-bottom: 10px; }
+        .detalle { margin: 15px 0; }
+        /* ¡Agrega aquí más estilos si necesitas! */
+    </style>
+</head>
+<body>
+    <div class="invitacion">
+        <h1>¡Estás invitado!</h1>
+        <p>A celebrar el primer añito de <strong>Santiaguito</strong></p>
+        
+        <div class="detalle">
+            <p>📅 <strong>Fecha:</strong> 31 de agosto 2025</p>
+            <p>⏰ <strong>Hora:</strong> 16:00</p>
+            <p>📍 <strong>Lugar:</strong> Salón de eventos Sakura</p>
+            <p>Av. Virgen de Cotoca #422</p>
+        </div>
+
+        <form id="rsvpForm">
+            <h3>Confirma tu asistencia</h3>
+            <input type="text" id="nombre" placeholder="Tu nombre" required style="padding: 10px; margin: 10px; width: 80%;">
+            <button type="submit" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                Confirmar por WhatsApp
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('rsvpForm').onsubmit = function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = `¡Confirmo asistencia al cumple de Santiaguito!%0ANombre: ${nombre}`;
+            window.open(`https://wa.me/59160733692?text=${mensaje}`, '_blank');
+        };
+    </script>
+</body>
+</html>
