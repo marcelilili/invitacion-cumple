@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>¡Invitación Cumple Santiaguito!</title>
+  <style>
+    /* Todos tus estilos CSS originales aquí */
+    body { font-family: Arial; background: #f0f8ff; }
+    .invitacion { max-width: 600px; margin: 0 auto; padding: 20px; }
+    /* Pega TODO tu CSS aquí */
+  </style>
+</head>
+<body>
+  <div class="invitacion">
+    <h1>¡Estás invitado!</h1>
+    <p>A celebrar el primer añito de <strong>Santiaguito</strong></p>
+    
+    <!-- Pega AQUÍ todo el HTML de tu invitación -->
+    <!-- (desde los detalles del evento hasta el formulario) -->
+
+    <script>
+      // Formulario que envía a WhatsApp
+      document.getElementById('rsvpForm').onsubmit = function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const asistentes = document.getElementById('asistentes').value;
+        const mensaje = document.getElementById('mensaje').value;
+        const texto = `Confirmo asistencia:%0ANombre: ${nombre}%0AAsistentes: ${asistentes}%0AMensaje: ${mensaje}`;
+        window.open(`https://wa.me/59160733692?text=${texto}`, '_blank');
+      };
+
+      // Pega AQUÍ tu contador regresivo original (JavaScript)
+    </script>
+  </div>
+</body>
+</html>
